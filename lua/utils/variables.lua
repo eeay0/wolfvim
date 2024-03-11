@@ -21,6 +21,10 @@ return {
             lsp = { lsp = "clangd", package_name = "clangd", conf = {} },
             linter = { linter = "clang-tidy", package_name = nil },
             formatter = { formatter = "clang-format", package_name = "clang-format" },
+            -- formatter: GDB
+        },
+        json = {
+            lsp = { lsp = "jsonls", package_name = "json-lsp", conf = {} },
         },
     },
 }

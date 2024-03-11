@@ -20,9 +20,9 @@ return {
         local Ft_Opts = require("utils.variables").Ft_Opts
 
         for _, lang in pairs(Ft_Opts) do
-            table.insert(tools, lang.lsp.package_name)
-            table.insert(tools, lang.linter.package_name)
-            table.insert(tools, lang.formatter.package_name)
+            if lang.lsp then table.insert(tools, lang.lsp.package_name) end
+            if lang.linter then table.insert(tools, lang.linter.package_name) end
+            if lang.formatter then table.insert(tools, lang.formatter.package_name) end
             if lang.dap then table.insert(tools, lang.dap.package_name) end
         end
 

@@ -24,20 +24,20 @@ return {
             },
             sections = {
                 lualine_a = {
-                    { "mode", separator = { left = "", right = "" }, right_padding = 4, left_padding = 4 },
+                    { "mode", separator = { left = "█", right = "" }, right_padding = 4, left_padding = 4 },
                 },
                 lualine_b = { "branch", "diff", "diagnostics" },
                 lualine_c = { "filename", "%=", [[datetime]] },
                 lualine_x = { "copilot", "encoding", "fileformat", "filetype" },
                 lualine_y = { "progress" },
                 lualine_z = {
-                    { "location", separator = { right = "" }, right_padding = 4, left_padding = 4 },
+                    { "location", separator = { left = "", right = "█" }, right_padding = 4, left_padding = 4 },
                 },
             },
             inactive_sections = {
                 lualine_a = {},
                 lualine_b = {},
-                lualine_c = { "filename" },
+                lualine_c = { "filename", { require("auto-session.lib").current_session_name } },
                 lualine_x = { "location" },
                 lualine_y = {},
                 lualine_z = {},

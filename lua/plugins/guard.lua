@@ -15,6 +15,12 @@ local M = {
                 else
                     ft(filetype):fmt(opts.formatter.formatter)
                 end
+            else
+                if opts.linter then
+                    ft(filetype):fmt("lsp"):lint(opts.linter.linter)
+                else
+                    ft(filetype):fmt("lsp")
+                end
             end
         end
 

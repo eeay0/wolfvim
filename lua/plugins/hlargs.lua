@@ -1,6 +1,6 @@
 local M = {
     "m-demare/hlargs.nvim",
-    event = "BufReadPost",
+    event = "UiEnter",
     config = function() require("hlargs").setup() end,
 }
 

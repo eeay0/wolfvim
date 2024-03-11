@@ -29,8 +29,6 @@ Spec("plugins.context")
 Spec("plugins.comment")
 Spec("plugins.todo_comments")
 Spec("plugins.indent")
---Spec("plugins.hlchunk")
+Spec("plugins.auto_session")
 -----------
 require("plugins.lazy")
-
-vim.cmd("colorscheme tokyonight")

@@ -22,9 +22,9 @@ map("n", "<A-H>", "<cmd>vertical resize -2<cr>", { desc = "Decrease window width
 map("n", "<A-L>", "<cmd>vertical resize +2<cr>", { desc = "Increase window width" })
 
 -- Windows
-map("n", "<leader>wd", "<C-W>c", { desc = "Delete window", remap = true })
-map("n", "<leader>ws", "<C-W>s", { desc = "Split window below", remap = true })
-map("n", "<leader>wv", "<C-W>v", { desc = "Split window right", remap = true })
+map("n", "<A-w>", "<C-W>c", { desc = "Delete window", remap = true })
+map("n", "<A-->", "<C-W>s", { desc = "Split window below", remap = true })
+map("n", "<A-\\>", "<C-W>v", { desc = "Split window right", remap = true })
 
 -- Center the next search
 map("n", "n", "nzz", opts)
@@ -35,12 +35,12 @@ map("n", "g*", "g*zz", opts)
 map("n", "g#", "g#zz", opts)
 
 -- Move Lines
-map("n", "<A-j>", "<cmd>m .+1<cr>==", { desc = "Move down" })
-map("n", "<A-k>", "<cmd>m .-2<cr>==", { desc = "Move up" })
-map("i", "<A-j>", "<esc><cmd>m .+1<cr>==gi", { desc = "Move down" })
-map("i", "<A-k>", "<esc><cmd>m .-2<cr>==gi", { desc = "Move up" })
-map("v", "<A-j>", ":m '>+1<cr>gv=gv", { desc = "Move down" })
-map("v", "<A-k>", ":m '<-2<cr>gv=gv", { desc = "Move up" })
+map("n", "<A-j>", "<cmd>m .+1<cr>==", opts)
+map("n", "<A-k>", "<cmd>m .-2<cr>==", opts)
+map("i", "<A-j>", "<esc><cmd>m .+1<cr>==gi", opts)
+map("i", "<A-k>", "<esc><cmd>m .-2<cr>==gi", opts)
+map("v", "<A-j>", ":m '>+1<cr>gv=gv", opts)
+map("v", "<A-k>", ":m '<-2<cr>gv=gv", opts)
 
 -- Clear search with <esc>
 map({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", { desc = "Escape and clear hlsearch" })

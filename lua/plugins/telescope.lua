@@ -105,7 +105,7 @@ return {
             scope_chdir = "global",
             datapath = vim.fn.stdpath("data"),
         })
-
+        require("auto-session").setup_session_lens()
         --- Keymaps
         local builtin = require("telescope.builtin")
         local extension = require("telescope").extensions
@@ -115,5 +115,8 @@ return {
         vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
         vim.keymap.set("n", "<leader>fp", "<cmd> Telescope projects<CR>", { silent = true })
         vim.keymap.set("n", "<leader>fu", "<cmd> Telescope undo <CR>")
+        vim.keymap.set("n", "<leader>fs", require("auto-session.session-lens").search_session, {
+            noremap = true,
+        })
     end,
 }

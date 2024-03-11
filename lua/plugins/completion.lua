@@ -22,7 +22,6 @@ return {
         },
         {
             "chrisgrieser/nvim-scissors",
-            dependencies = "nvim-telescope/telescope.nvim", -- optional
             opts = {
                 snippetDir = "/home/eeay/src/snippets",
             },
@@ -50,6 +49,11 @@ return {
             view = {
                 entries = { name = "custom", selection_order = "near_cursor" },
             },
+            window = {
+                completion = {
+                    scrollbar = true,
+                },
+            },
             formatting = {
                 format = lspkind.cmp_format({
                     mode = "symbol_text",
@@ -67,11 +71,6 @@ return {
                 disallow_fuzzy_matching = false,
                 disallow_fullfuzzy_matching = false,
                 disallow_partial_fuzzy_matching = false,
-            },
-            window = {
-                completion = {
-                    scrollbar = true,
-                },
             },
             experimental = {
                 ghost_text = true,
